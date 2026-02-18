@@ -53,42 +53,41 @@ function App() {
    placeholder="0.00"
    className="w-full pl-8 pr-4 py-4 bg-gray-50 border-2 border-gray-100 rounded-2xl purple-400 focus:ring-0 outline-none transition-all text-lg font-medium"
             />
-          </div>
-        </div>
-        <div className="mb-10">
-          <p className="mb-3 text-sm font-bold text-gray-700 text-center">
-            Selecciona el procentaje de propina
-          </p>
-          <div className="grid grid-cols-3 gap-3">
-            {[10, 15, 20].map((num) => (
-              <button 
-                key={num}
-                onClick={() => calcular(num)}
-                className="py-4 rounded-xl font-black text-gray-700"
-              >
-                <span className="relative z-10">{num}%</span>
-                <div className="text-co" />
-              </button>
-            ))}
-          </div>
-        </div>
+  </div>
+   </div>
+   <div className="mb-10">
+   <p className="mb-3 text-sm font-bold text-gray-700 text-center"> Selecciona el procentaje de propina</p>
+   <div className="grid grid-cols-3 gap-3">
+  {[10, 15, 20].map((num) => (
 
-        <div className="bg-black p-7 text-black shadow-inner">
-          <div className="flex justify-between items-center mb-4">
-            <span className="text-gray-400 font-medium">Propina</span>
-            <span className="text-xl font-bold text-blue-400">${propina.toFixed(2)}</span>
-          </div>
-          <div className=" bg-gray-700 mb-4" />
-          <div className="flex justify-between items-end">
-            <span className="text-gray-400 ">Total a pagar</span>
-            <span className="text-4xl font-black text-blue-50">
-              ${total.toFixed(2)}
-            </span>
-          </div>
-        </div>
+  <button 
+   key={num}
+    onClick={() => calcular(num)}
+    className="py-4 rounded-xl font-black text-gray-700">
+    <span className="relative z-10">{num}%</span>
+    <div className="text-co" />
+    </button>
 
-      </div>
+    ))}
+  </div>
+   </div>
+
+  <div className="bg-black p-7 text-black shadow-inner">
+  <div className="flex justify-between items-center mb-4">
+    <span className="text-gray-400 font-medium">Propina</span>
+    <span className="text-xl font-bold text-blue-400">${propina.toFixed(2)}</span>
+
+   </div>
+   <div className=" bg-gray-700 mb-4" />
+   <div className="flex justify-between items-end">
+      
+   <span className="text-gray-400 ">Total a pagar</span>
+   <span className="text-4xl font-black text-blue-50"> ${total.toFixed(2)}</span>
+
+</div>
+  </div>
     </div>
+      </div>
   );
 }
 
